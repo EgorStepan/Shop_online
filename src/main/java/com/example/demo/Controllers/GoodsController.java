@@ -25,12 +25,6 @@ public class GoodsController {
         model.addAttribute("goods",goodsService.getProductById(id));
         return "Goods_info";
     }
-    @GetMapping("/goods/{id}")
-    public String GoodsInfo_2(@PathVariable int id, Model model){
-        model.addAttribute("goods",goodsService.getProductById(id));
-        return "Goods_info";
-    }
-
     @PostMapping("/goods/create")
     public String createProduct(Goods good){
         goodsService.setGoods(good);
